@@ -1,0 +1,143 @@
+/* Tosca Theme */
+:root {
+    --tosca: #00b3b3;
+    --light-tosca: #40e0d0;
+    --dark-tosca: #008080;
+    --white: #ffffff;
+    --gray: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--gray);
+    color: var(--dark-tosca);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--tosca);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: var(--white);
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--light-tosca);
+    transform: scale(1.1);
+    animation: pulse 0.5s infinite;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: var(--white);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: slideUp 0.8s ease-out, bounce 1s ease-in-out 0.8s;
+}
+
+#hero {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--tosca);
+    transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+    transform: rotate(5deg);
+}
+
+#biodata ul {
+    list-style: none;
+    padding: 0;
+}
+
+#biodata li {
+    margin-bottom: 0.5rem;
+}
+
+.project {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--tosca);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.project-link {
+    display: inline-block;
+    background-color: var(--tosca);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: var(--dark-tosca);
+}
+
+footer {
+    background-color: var(--tosca);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    section {
+        padding: 1rem;
+    }
+}
